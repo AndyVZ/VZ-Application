@@ -1,9 +1,11 @@
 package com.company.Lab62;
 
+import java.io.Serializable;
+
 /**
  * Created by VZ-RED on 24.08.2016.
  */
-public class Flat62 {
+public class Flat62 implements Serializable {
     private String fridge ;
     private String microwave ;
     private String toaster ;

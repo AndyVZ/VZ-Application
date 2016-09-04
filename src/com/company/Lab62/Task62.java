@@ -2,7 +2,8 @@ package com.company.Lab62;
 
 import java.util.Scanner;
 
-import static com.company.Lab62.Array.flat;
+
+import static com.company.Lab62.Main62.flat;
 
 
 /**
@@ -17,13 +18,6 @@ public class Task62
             String tempNumberFlat = scanner.nextLine();
             int numberFlat = Integer.parseInt(tempNumberFlat);
 
-            System.out.println("введено "+numberFlat);
-
-         //   if (numberFlat>Array.QUANTITY)
-          //  {
-          //      System.out.println("зашли в иф ");
-          //      Array.newArray(numberFlat);
-          //  }
 
             System.out.println ("Введите модель холодильника");
             String tempFridge = scanner.nextLine();
@@ -116,7 +110,7 @@ public class Task62
     }
 
     public static void printAllFlat(){
-        for (int i=0; i<Array.QUANTITY; i++){
+        for (int i=0; i<Main62.QUANTITY; i++){
             if (flat[i].getFridge()!=null | flat[i].getMicrowave()!=null |flat[i].getToaster()!=null ){
                 System.out.println("Квартира № "+(i+1));
                 System.out.println("холодильник: "+flat[i].getFridge()+" мощность: "+flat[i].getPowerFridge());
@@ -131,7 +125,7 @@ public class Task62
         int sum=0;
         int maxSum=0;
         int k=0;
-        for (int i=0; i<Array.QUANTITY; i++){
+        for (int i=0; i<Main62.QUANTITY; i++){
             if (flat[i].getPowerFridge()!=0 | flat[i].getPowerMicrowave()!=0 |flat[i].getPowerToaster()!=0 ){
                 sum = flat[i].getPowerFridge()+ flat[i].getPowerMicrowave()+ flat[i].getPowerToaster();
                 if (sum>maxSum) {maxSum = sum;k=i;}
@@ -147,7 +141,7 @@ public class Task62
         int sum=0;
         int k=0;
         float average=0;
-        for (int i=0; i<Array.QUANTITY; i++){
+        for (int i=0; i<Main62.QUANTITY; i++){
             if (flat[i].getPowerFridge()!=0 | flat[i].getPowerMicrowave()!=0 |flat[i].getPowerToaster()!=0 ){
              sum = sum + flat[i].getPowerFridge()+ flat[i].getPowerMicrowave()+ flat[i].getPowerToaster();
              k++;
@@ -157,5 +151,9 @@ public class Task62
         Main62.start();
 
     }
+
+
+
+
 
 }
